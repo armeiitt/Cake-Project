@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Banner from "../components/Banner";
-import 'swiper/swiper-bundle.min.css';
 
 function Home() {
   const [dataPlace, setDataPlace] = useState([]);
@@ -27,7 +26,7 @@ function Home() {
   }, []);
   return (
     <main>
-      <Banner />;
+      <Banner />
       <div className="grid grid-cols-5 gap-4 w-full justify-between">
         {dataPlace.map((post) => {
           return (
