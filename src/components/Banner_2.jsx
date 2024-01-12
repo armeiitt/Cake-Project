@@ -13,7 +13,7 @@ function Footer() {
             src="https://skins.minimog.co/cdn/shop/files/cake_image_card.jpg?v=1659954235&amp;width=940"
             alt=""
             srcSet=""
-            style={imageStyle} // Sử dụng đối tượng style
+            style={imageStyle} // Sử dụng đối tượng style 
           />
         </div>
         <div>
