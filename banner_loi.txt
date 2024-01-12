@@ -1,0 +1,65 @@
+import React from "react";
+import { Outlet, Link } from "react-router-dom";
+function Banner() {
+  return (
+    <div>
+      <div>
+        <div>
+          <img src="https://skins.minimog.co/cdn/shop/files/cake_slide_1.jpg" />
+          <div>
+            <div>
+              <h4>
+                Little bliss in
+                <br />
+                Every bite
+              </h4>
+              <p>
+                Special fluffiness for your loved one! A thoughtful expression
+                through good food and warm experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="https://skins.minimog.co/cdn/shop/files/cake_slide_2.jpg" />
+          <div class="swiper-slide-transform">
+            <div>
+              <h4>
+                Little bliss in
+                <br />
+                Every bite
+              </h4>
+              <p>
+                Special fluffiness for your loved one! A thoughtful expression
+                through good food and warm experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="https://skins.minimog.co/cdn/shop/files/cake_slide_3.jpg" />
+          <div class="swiper-slide-transform">
+            <div>
+              <h4>
+                Little bliss in
+                <br />
+                Every bite
+              </h4>
+              <p>
+                Special fluffiness for your loved one! A thoughtful expression
+                through good food and warm experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div> --> */}
+    </div>
+  );
+}
+
+export default Banner;

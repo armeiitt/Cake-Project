@@ -1,42 +1,28 @@
-import { useState, useEffect } from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import "./assets/css/Footer.css";
+import "swiper/css/swiper-bundle.min.css"; // Updated import statement
+import "../src/components/Banner";
+
+// Router
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import ViteSwiperPlugin from "vite-plugin-swiper";
 
 function App() {
-  const [dataPlace, setDataPlace] = useState([]);
-
-  useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        setDataPlace(data);
-        console.log(data);
-      })
-      .catch((error) => console.error(error));
-  }, []);
-
   return (
-    <>
-      {/* <Header /> */}
-      <main>
-        {dataPlace.map((post) => {
-          return (
-            <div className="flex flex-row justify-center">
-              <div key={post.id} className="bg-[#f1f1f1] my-2 flex flex-col justify-center p-3 w-[80%]">
-                <div className="border-b-2 border-b-gray-300 pb-2">{post.title}</div>
-                <div className="">{post.body}</div>
-            </div>
-            </div>
-          );
-        })}
-      </main>
-      {/* <Footer /> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
